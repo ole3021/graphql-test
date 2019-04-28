@@ -1,5 +1,7 @@
 'use strict';
 
+const app = require('../server');
+
 /** Disable PersistedModel's default remote methods (endpoints).
  * @param {Object} model: The PresistedModel class
  * @param {string[]} allowedMethods: List of allowed remote method names, check: https://apidocs.strongloop.com/loopback/#persistedmodel
@@ -15,3 +17,5 @@ exports.disableRemoteMethods = (model, allowedMethods = []) => {
     }
   });
 };
+
+exports.getApp = () => app;

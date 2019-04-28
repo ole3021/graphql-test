@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "guestNames": {
+    "guestName": {
       "type": "string",
       "required": true
     },
@@ -18,7 +18,7 @@
       "type": "date",
       "required": true
     },
-    "departureDate": {
+    "departureAt": {
       "type": "date",
       "required": true
     }
