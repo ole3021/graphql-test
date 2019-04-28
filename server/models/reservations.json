@@ -1,0 +1,30 @@
+{
+  "name": "reservations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "guestNames": {
+      "type": "string",
+      "required": true
+    },
+    "hotelName": {
+      "type": "string",
+      "required": true
+    },
+    "arrivalAt": {
+      "type": "date",
+      "required": true
+    },
+    "departureDate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
