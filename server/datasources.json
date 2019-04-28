@@ -1,0 +1,12 @@
+{
+  "mongo": {
+    "host": "localhost",
+    "port": "27017",
+    "url": "",
+    "database": "graphql_test",
+    "password": "${mongoUserPassword}",
+    "name": "mongo",
+    "connector": "loopback-connector-mongodb",
+    "user": "${mongoUserName}"
+  }
+}

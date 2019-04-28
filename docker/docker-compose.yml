@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: graph_test_mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+          - ../data/mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Passw0r!d
+
+  mongo-express:
+    image: mongo-express
+    container_name: graph_test_mongo_express
+    restart: always
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: Passw0r!d
