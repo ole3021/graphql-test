@@ -19,8 +19,10 @@
     "report-coverall": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
+    "apollo-server": "^2.4.8",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "graphql": "^14.2.1",
     "helmet": "^3.10.0",
     "loopback": "^3.22.0",
     "loopback-boot": "^2.6.5",
