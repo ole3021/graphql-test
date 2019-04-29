@@ -4,9 +4,13 @@ const { getApp } = require('../utils/lb-helper');
 const app = getApp();
 
 module.exports = {
-  // TODO: Mutation
+  Mutation: {
+    createReservation: (ojb, { data }, context) => {
+      return app.models.Reservations.create(data);
+    }
+  },
   Query: {
-    getReservation: (parent, args, context, info) => {
+    getReservation: (obj, args, context, info) => {
       return app.models.Reservations.findById(args.id);
     },
 
