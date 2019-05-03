@@ -15,9 +15,15 @@ input ReservationInput {
   departureAt: Date!
 }
 
+input QueryInput {
+  skip: Int
+  limit: Int
+}
+
 type Query {
   getReservation(id: ID!): Reservation
-  reservations: [Reservation]
+  totalReservations: Int
+  reservations(query: QueryInput): [Reservation]
 }
 
 type Mutation {
