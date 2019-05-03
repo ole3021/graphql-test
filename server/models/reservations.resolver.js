@@ -10,10 +10,17 @@ module.exports = {
     }
   },
   Query: {
-    getReservation: (obj, args, context, info) => {
-      return app.models.Reservations.findById(args.id);
+    getReservation: (obj, { id }, context, info) => {
+      return app.models.Reservations.findById(id);
     },
 
-    reservations: () => app.models.Reservations.find()
+    reservations: (obj, { query }, context, info) => {
+      const { limit, skip } = query;
+      return app.models.Reservations.find({ limit, skip });
+    },
+
+    totalReservations: (obj, args, context, info) => {
+      return app.models.Reservations.count();
+    }
   }
 };
