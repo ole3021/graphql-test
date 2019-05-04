@@ -108,7 +108,7 @@ Ran all test suites.
 ├── test
 │   └── base.test.js
 └── yarn.lock
-
+└── Dockerfile                       # The docker file used to build the docker image of this project.
 ```
 
 ## Test GraphQL
