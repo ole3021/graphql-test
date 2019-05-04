@@ -14,9 +14,12 @@ module.exports = {
       return app.models.Reservations.findById(id);
     },
 
-    reservations: (obj, { query }, context, info) => {
+    reservations: (obj, { query = {} }, context, info) => {
       const { limit, skip } = query;
-      return app.models.Reservations.find({ limit, skip });
+      return app.models.Reservations.find({
+        limit: limit || 10,
+        skip: skip || 0
+      });
     },
 
     totalReservations: (obj, args, context, info) => {
